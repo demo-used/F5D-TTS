@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Rhythm Controllable Zero-Shot Voice Conversion via Diffusion Transformer and Mask Generative Duration Mode">
+        content="F5D-TTS: Aligning Flow-Matching Text-to-Speech Models with Direct Preference Optimization">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ditvc</title>
@@ -41,7 +41,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Rhythm Controllable Zero-Shot Voice Conversion via Diffusion Transformer and Mask Generative Duration Mode</h1>
+          <h1 class="title is-1 publication-title">F5D-TTS: Aligning Flow-Matching Text-to-Speech Models with Direct Preference Optimization</h1>
           <div class="is-size-5 publication-authors">
             <!-- <span class="author-block">Qian Yang<sup>1,*</sup>,</span>
             <span class="author-block">Jialong Zuo<sup>1,*</sup>,</span>
@@ -97,7 +97,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Zero-Shot Voice Conversion (VC) aims to transform the source speaker’s timbre into an arbitrary unseen one while retaining speech content. However, in addition to linguistic content and timbre, prosody is an indispensable aspect of speech. Most prior work focuses on preserving the source's prosody, while fine-grained timbre information may leak through prosody, and transferring target prosody to synthesized speech is rarely studied. In light of this, we propose R-VC, a rhythm-controllable zero-shot voice conversion model, leveraging a powerful Diffusion Transformer (DiT) with a target speech prompting strategy, and a Mask Generative Transformer model for in-context duration modeling. Specifically, we apply data perturbation techniques and discretize source speech into Hubert content tokens, which greatly eliminate content-irrelevant information. Additionally, we deduplicate the same discrete tokens and employ a Mask Generative Transformer to adapt the duration of the linguistic content to the desired target speaking style. Finally, to enhance speaker similarity and generate high-quality speech, we use a DiT-based conditional flow matching model to reconstruct acoustic features. Experimental results show that DD-VC achieves comparable speaker similarity to state-of-the-art VC methods with a smaller dataset, and surpasses them in terms of speech naturalness, pitch consistency and style transfer performance.
+          Speech generation has achieved significant advances through flow-matching techniques. And reinforcement learning from human feedback shown the possibility of further improving the performance of speech generation models. In this work ,we propose F5D-TTS, a framework for integrating flow-matching text-to-speech models to human preferences by directly optimizing on human preference data pairs. Specifically, we start by using the base F5-TTS model to create a preference dataset with 10000 speech pairs (about 2 hours), with a winner speech and a loser speech generated in the same prompt. Then we align flow matching TTS model with Flow-DPO. Experiments show that F5D-TTS significantly outperforms both the base F5-TTS model and the supervised-finetuned F5-TTS model in speaker similarity (measured by SIM-O) while maintaining speech intelligence (measured by WER) and speech naturalness (measured by UTMOS). We also show Flow-DPO alignment is applicable to low-resource scenarios.
           </p>
         </div>
 
